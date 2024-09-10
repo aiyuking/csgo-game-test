@@ -1,3 +1,4 @@
+#pragma once
 #include <Windows.h>
 BOOL InjectDll(HANDLE hProcess, LPCSTR dllPath){
     LPVOID lpRemoteMem = VirtualAllocEx(hProcess, NULL, strlen(dllPath) + 1, MEM_COMMIT, PAGE_READWRITE);
